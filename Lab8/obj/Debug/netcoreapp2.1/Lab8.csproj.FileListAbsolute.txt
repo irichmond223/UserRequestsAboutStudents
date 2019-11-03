@@ -4,7 +4,6 @@ C:\Users\ilona\source\repos\C#\Arrays\Lab8\Lab8\bin\Debug\netcoreapp2.1\Lab8.run
 C:\Users\ilona\source\repos\C#\Arrays\Lab8\Lab8\bin\Debug\netcoreapp2.1\Lab8.dll
 C:\Users\ilona\source\repos\C#\Arrays\Lab8\Lab8\bin\Debug\netcoreapp2.1\Lab8.pdb
 C:\Users\ilona\source\repos\C#\Arrays\Lab8\Lab8\obj\Debug\netcoreapp2.1\Lab8.csprojAssemblyReference.cache
-C:\Users\ilona\source\repos\C#\Arrays\Lab8\Lab8\obj\Debug\netcoreapp2.1\Lab8.csproj.CoreCompileInputs.cache
 C:\Users\ilona\source\repos\C#\Arrays\Lab8\Lab8\obj\Debug\netcoreapp2.1\Lab8.AssemblyInfoInputs.cache
 C:\Users\ilona\source\repos\C#\Arrays\Lab8\Lab8\obj\Debug\netcoreapp2.1\Lab8.AssemblyInfo.cs
 C:\Users\ilona\source\repos\C#\Arrays\Lab8\Lab8\obj\Debug\netcoreapp2.1\Lab8.dll

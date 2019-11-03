@@ -11,6 +11,7 @@ namespace Lab8
             string[] hometown = {"Kiev","Dnipro","Lugansk","Detroit","Ann Arbor","Grand Rapids","Las Vegas","New York","Chicago","Los Angeles"};
 
             //try use "\n" 
+            //Used + 1 in writeLine to list the names starting from 1 instead of default 0
             Console.WriteLine("Welcome to our C# class.  ");
 
             for (int i = 0; i < names.Length; i++)
@@ -25,7 +26,9 @@ namespace Lab8
                 try
                 {
                     string stringUserInput = Console.ReadLine();
-                    int intUserInput = int.Parse(stringUserInput) - 1;
+                    //Converted to integer and added -1 to count user input starting from 1 instead of 2. Example: typed in 1, Michael appears as 1.
+
+                    int intUserInput = int.Parse(stringUserInput)-1;
 
                     bool knowMoreInput = true;
 
@@ -68,13 +71,13 @@ namespace Lab8
                             playAgain = false;
                         }       
                 }
-                catch (IndexOutOfRangeException)
+                catch (IndexOutOfRangeException) //Used when the number exceedes 1-10 range
                 {
-                    Console.WriteLine("That student does not exist.Please try again. (enter a number 1 - 3)");
+                    Console.WriteLine("That student does not exist.Please try again. (enter a number 1 - 10)");
                 }
-                catch (FormatException)
+                catch (FormatException) //Used when the user typed in in a wrong format, in this case in words instead of numbers
                 {
-                    Console.WriteLine("Enter words only.Please try again.");
+                    Console.WriteLine("Enter numbers 1- 10 only.Please try again.");
                 }
             
             }
