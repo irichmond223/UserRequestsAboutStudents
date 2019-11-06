@@ -7,8 +7,51 @@ namespace Lab8
         static void Main(string[] args)
         {
             //ArrayOfStudents students = new ArrayOfStudents(); //Calling a class and a method within a class - create an object only if data type of the method is not void.
+            //Just call the class and pass method into it
             ArrayOfStudents.Arrays();
+
+            //Another way for passing voer method through class:
+            //Data type is bool, this is why we are using object.
+            //LoopYesOrNo loop = new LoopYesOrNo();
+            //LoopYesOrNo.LoopAgain();
         }
+        /// <summary>
+        /// Method LoopAgain was created to know more about another student or not
+        /// </summary>
+        /// <returns></returns>
+
+        public class LoopYesOrNo
+        {
+            public static bool LoopAgain()
+            {
+                bool playAgain = true;
+                Console.WriteLine("Would you like to know more? (enter yes or no)");
+                try
+                {
+                    string againInput = Console.ReadLine();
+
+
+                    if (againInput == "yes")
+                    {
+                        return playAgain = true;
+
+                    }
+                    else if (againInput == "no")
+                    {
+                        Console.WriteLine("Thanks!");
+
+                        return playAgain = false;
+                    }
+
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Enter words only. Please try again.");
+                }
+                return playAgain;
+            }
+        }
+
         public class ArrayOfStudents
         {
             public static void Arrays()
@@ -26,6 +69,7 @@ namespace Lab8
                     Console.WriteLine($"{i + 1}. {names[i]}");
 
                 }
+
                 bool playAgain = true;
                 while (playAgain)
                 {
@@ -35,7 +79,6 @@ namespace Lab8
                         string stringUserInput = Console.ReadLine();
 
                         //Converted to integer and added -1 to count user input starting from 1 instead of 2. Example: typed in 1, Michael appears as 1.
-
                         int intUserInput = int.Parse(stringUserInput) - 1;
 
                         bool knowMoreInput = true;
@@ -60,33 +103,14 @@ namespace Lab8
                             {
                                 Console.WriteLine("That data does not exist. Please try again. (enter or “hometown” or “favorite food”)");
                                 knowMoreInput = true;
-
                             }
-                        }
 
-                        Console.WriteLine("Would you like to know more? (enter yes or no)");
-                        try
-                        {
-                            string againInput = Console.ReadLine();
-
-
-                            if (againInput == "yes")
-                            {
-                                knowMoreInput = true;
-                                playAgain = true;
-                            }
-                            else if (againInput == "no")
-                            {
-                                Console.WriteLine("Thanks!");
-                                knowMoreInput = false;
-                                playAgain = false;
-                            }
                         }
-                        catch (FormatException)
-                        {
-                            Console.WriteLine("Enter words only. Please try again.");
-                        }
+                        //Connected the main loop to the method that is resposible for continue and end the program (Added class)
+                        playAgain = LoopYesOrNo.LoopAgain();
+
                     }
+
                     catch (FormatException) //Used when the user typed in in a wrong format, in this case in words instead of numbers.
                     {
                         Console.WriteLine("Enter numbers only. Please try again.");
@@ -95,19 +119,16 @@ namespace Lab8
                     {
                         Console.WriteLine("That student does not exist. Please try again.");
                     }
-                    //catch (ArgumentNullException) //When no input was entered.
-                    //{
-                        //Console.WriteLine("No input was entered. Please try again.");
-                    //}
-                    
                     catch (ArgumentNullException)
                     {
                         Console.WriteLine("Value cannot be null. Try again.");
                     }
 
                 }
-                return;
+
             }
         }
+
     }
 }
+
