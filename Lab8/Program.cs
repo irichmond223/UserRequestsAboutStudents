@@ -101,7 +101,7 @@ namespace Lab8
                             }
                             else
                             {
-                                Console.WriteLine("That data does not exist. Please try again. (enter or “hometown” or “favorite food”)");
+                                Console.WriteLine("That data does not exist. Please try again. (enter “hometown” or “favorite food”)");
                                 knowMoreInput = true;
                             }
 
